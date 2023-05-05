@@ -1,83 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SPERMO</title>
+    <title>ONCHAINSPERM NFT</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-const images = document.querySelectorAll(".image-container img");
-
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    window.location.href = img.parentNode.href;
-  });
-});
-
-</script>
-
- <script>
-    function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
-      var expires = "expires="+ d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
-    function getCookie(cname) {
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-
-    function acceptCookies() {
-      setCookie("cookieConsent", "accepted", 365);
-      hideBanner();
-    }
-
-    function declineCookies() {
-      setCookie("cookieConsent", "declined", 365);
-      hideBanner();
-    }
-
-    function hideBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "none";
-    }
-
-    function showBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "block";
-    }
-
-    window.onload = function() {
-      if (getCookie("cookieConsent") == "accepted") {
-        hideBanner();
-      } else {
-        showBanner();
-      }
-    }
-  </script>
-
     
     <style>
       
 body {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
   margin: 0;
   background-color: #252954;
 }
@@ -909,242 +841,10 @@ z-index: 999; /* set a high z-index value */
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
-}
-.metamask-logo {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    background-image: url('metamask.png');
-    background-size: cover;
-  }
-  .chart-container {
-    text-align: center;
-   
-  }
-  .row {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-  .column {
-    flex: 1;
-    padding: 0 10px;
-  }
-  @media screen and (max-width: 1040px) {
-    .row {
-      flex-direction: column;
-    }
-    .column {
-      flex: none;
-      width: 100%;
-      padding: 0;
-    }
-  }
-.column {
-	width: 33.33%;
-	padding: 5px;
-	display: flex;
-}
-
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
-}
-
-		
-		.chart {
-			border: 2px solid #6C5DD3;
-			padding: 10px;
-			margin: 10px 0;
-		}
-		
-		.chart table {
-		  color:white;
-			border-collapse: collapse;
-			width: 100%;
-			
-			text-align: left;
-		}
-		
-.chart table th,
-.chart table td {
-  padding: 5px;
-  border: 2px solid #6C5DD3;
-}
-
-h2 {
-  color: white;
-}
-.question {
-  color:white;
-  margin-bottom: 10px;
-  border: 3px solid #6C5DD3;
-  border-radius: 5px;
-  padding: 10px;
-  position: relative;
-}
-
-.question h3 {
-  margin: 0;
-}
-
-.answer {
-  display: none;
-  margin-top: 10px;
-}
-
-.question.open .answer {
-  display: block;
-}
-
-.question::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 6px 0 6px 6px;
-  border-color: transparent transparent transparent #666;
-}
-#profile-img {
-    width:70px;
-    height:auto;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-   }
-  .button {
-    border: 2px solid #6C5DD3; /* add border to button */
-    padding: 5px; /* add padding to button */
-    border-radius: 5px; /* add border radius to button */
-    filter: brightness(100%);
-    transition: all 0.2s ease-in-out;
-    overflow: hidden;
-  }
-
-  .button:hover {
-    filter: brightness(150%);
-    transform: scale(1.1);
-  }
-
-  .button:hover img {
-    filter: invert(100%) brightness(100%);
-  }
- 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .social-icons img {
-      height: 25px;
-      width: auto;
-      margin: 0 2px;
-    }
-    .social-icons a {
-      filter: brightness(100%);
-      transition: all 0.2s ease-in-out;
-    }
-    .social-icons a:hover {
-      filter: brightness(150%);
-      transform: scale(1.1);
-    }
-    .social-icons a:hover img {
-      filter: invert(100%) brightness(100%);
-    }
-.partners {
-    display: inline-block;
-    position: relative;
-    margin: -10px;
-}
-
-.partners a {
-    display: block;
-}
-
-.partners img {
-    width: 150px;
-    height: auto;
-}
-
-.partners .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.partners:hover .overlay {
-    opacity: 1;
-}
 a {
     color: pink;
   }
-  .glow-border {
-    border: 1px solid #6C5DD3;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000;
-    animation: glow 3s ease-in-out infinite alternate;
-  }
-
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e;
-    }
-    to {
-      box-shadow: 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3;
-    }
-  }
-.add {
-            border: 1px solid #9B51E0;
-            padding: 10px;
-            font-family: Arial;
-            max-width: 800px;
-            overflow-x: auto;
-            margin: 50px auto;
-            text-align: left;
-            color: pink;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            table-layout: fixed;
-            padding: 0;
-            
-        }
-
-        th, td {
-            text-align: left;
-            padding: 8px;
-            border-bottom: 1px solid #9B51E0;
-        }
-
-        th {
-            font-weight: bold;
-        }
-   h1 {
-     height: 100%;
-  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-   }
+      
      
     </style>
   </head>
@@ -1163,10 +863,10 @@ a {
     <div class='menu-button'></div>
   </label>
   <ul class="menu">
-    <li><a href="./roadmap">Roadmap</a></li>
+    <li><a href="https://onchainsperm.github.io/onchain/roadmap" onclick="myFunction()">Roadmap</a></li>
     <li><a href="./whitepaper" onclick="myFunction()">Whitepaper</a></li>
     <li><a href="./spermotokendocs" onclick="myFunction()">SPERMO TOKEN Docs</a></li>
-
+    <li><a href="./burntspermo" onclick="myFunction()">Burned SPERMO TOKEN</a></li>
     <li><a href="./earnspermotoken" onclick="myFunction()">How to Start?</a></li>
     <li><a href="./support" onclick="myFunction()">Support</a></li>
     <li><a href="./about" onclick="myFunction()">About</a></li>
@@ -1177,7 +877,7 @@ a {
     
     <div class="landingpage">
       <div class="navbar">
-        <a class="navlogo">SPERMO</a>
+        <a class="navlogo">ONCHAINSPERM NFT</a>
 
 
       </div>
@@ -1186,24 +886,23 @@ a {
           <p class="infobox-boldtext">
             Discover, collect, and Earn Passive Cryptocurrency in extraordinary NFT collectibles</p>
           <p class="infobox-slimtext">
-            This project is focused on creating a platform that provides both crypto and NFT investors with a unique opportunity to earn passive income while adding value to their investments.To support the growth of the crypto and NFT industries while generating consistent passive income for investors.
-  </p>
+            ONCHAINSPERM NFT is a collection of 777 On-chain NFT collectibles. Its unique feature aside from being on-chain is the ability to yield crypto just by holding the NFT on wallet.(No more staking)
+          </p>
           <div class="infobox-btnwrapper">
-            <a href="./roadmap">
-            <button class="infobox-explorebtn selected">Roadmap</button></a>
-
-            <a href="./whitepaper">
-            <button class="infobox-createbtn">Whitepaper</button></a>
+            <a href="https://opensea.io/collection/onchain-sperm">
+            <button class="infobox-explorebtn selected">Explore NFTs</button></a>
+            <a href="./">
+            <button class="infobox-createbtn">Main Page</button></a>
           </div>
         </div>
         <div class="display">
-          <img class="display-nft" src="mint.jpg" alt="unsplash-OG44d93i-NJk" border="0">
+          <img class="display-nft" src="https://raw.githubusercontent.com/onchain123/onchain/main/85f377c8cd840a24df00625294ecabcb.svg" alt="unsplash-OG44d93i-NJk" border="0">
           <div class="infowrapper">
             <div class="info">
               <img class="info-img" src="https://raw.githubusercontent.com/onchain123/onchain/main/spermologo.png" alt="unsplash-OG44d93i-NJk" border="0">
               <div>
-                <p>SPERMO TOKEN</p>
-
+                <p>SPERMO</p>
+                <p>1.1 MATIC</p>
               </div>
       </div>
             <div class="info2">
@@ -1217,82 +916,6 @@ a {
             </div>
           </div>
         </div>
-      </div>
-      <h2>
-        🤖
-      </h2>
-      <div class="box">
-        <div class="infobox">
-          <p class="infobox-boldtext">
-            Hold NFT to Earn SPERMO TOKEN</p>
-          <p class="infobox-slimtext">
-            ONCHAINSPERM NFT is use as a "minter"for minting SPERMO tokens,Newly minted SPERMO can only be distributed through ONCHAINSPERM NFTs.
-          </p>
-          <p class="infobox-slimtext">
-            The users will only need to hold the NFT for them to receive the minted SPERMO tokens (No more Staking).
-            The distribution of SPERMO TOKEN is automated and done once every 24 hours and the minting will continue everyday but will not exceed to the max supply of 21,000.
-            </p>
-          <p class="infobox-slimtext">
-            Who ever hold this NFT is eligible to receive SPERMO TOKEN every single day.</p>
-          <p class="infobox-slimtext">
-            The user must need to add the SPERMO TOKEN contract address to their Metamask wallet (Polygon) and hold this NFT and start receiving SPERMO TOKEN.
-            </p>
-          <p class="infobox-slimtext">
-             Every NFT can only mint 0.01481 SPERMO TOKEN every 24 hours, So if a user is holding 10 NFTs he will receive 0.1481 SPERMO TOKEN every 24 hours instead of 0.01481 SPERMO TOKEN. The more you hold the more SPERMO TOKEN you will be receiving.</p>
-          </div>
-          </div>
-          <h2>🤖</h2>
-      <div class="box">
-        <div class="infobox">
-          <p class="infobox-boldtext">
-            Become a Minter Now!
-            </p>
-            <p>
-          <p class="infobox-slimtext">
-            Get your own ONCHAINSPERM NFT Now and start minting your own SPERMO Tokens!
-            </p>
-            </p>
-            <p>
-              
-            </p>
-          <div class="infobox-btnwrapper">
-            <a href="./buy spermo">
-            <button class="infobox-explorebtn selected">Buy SPERMO</button></a>
-            <a href="./burntspermo">
-            <button class="infobox-createbtn">Burn SPERMO</button></a>
-
-
-            </div>
-            </div>
-        <div class="infobox">
-          <div class="infobox-btnwrapper">
-            <a href="https://opensea.io/collection/onchain-sperm">
-            <button class="infobox-explorebtn selected">Buy NFT on Opensea</button></a>
-            <a href="https://rarible.com/onchainsperm">
-            <button class="infobox-createbtn">Buy NFT on Rarible</button></a>
-
-            </div>
-            </div>
-        <div class="infobox">
-          <div class="infobox-btnwrapper">
-<div style="display: flex; justify-content: center;">
-  <a href="./add spermo token">
-    <button class="infobox-explorebtn selected">
-      <span class="metamask-logo"></span>
-      Add to Metamask
-    </button>
-  </a>
-</div>
-</div>  
-</div>
-<div class="infobox">
-          <div class="infobox-btnwrapper">
-
-            <a href="./nft">
-            <button class="infobox-createbtn">Explore NFTs</button></a>
-
-            </div>
-            </div>
       </div>
       <div class="auction">
         <div class="title">
@@ -1338,179 +961,6 @@ a {
           </div>
         </div>
       </div>
-
-<div class="#">
-  <div class="#">
-    <div class="add">
-      <div class="chart">
-          <h2>Token Distribution</h2>
-        <table>
-          <tr>
-            <th>MINTING DAYS</th>
-            <td>REWARD</td>
-          </tr>
-          <tr>
-            <th>Daily Minting per NFT</th>
-            <td>0.01481</td>
-          </tr>
-          <tr>
-            <th>Monthly Minting per NFT</th>
-            <td>0.4443</td>
-          </tr>
-          <tr>
-            <th>Yearly Minting per NFT</th>
-            <td>5.4</td>
-          </tr>
-          <tr>
-            <th>Minting Length</th>
-            <td>Infinite</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="add">
-      <div class="chart">
-        <h2>Tokenomics</h2>
-        <table>
-          <tr>
-            <th>Token Name</th>
-            <td>SPERMO TOKEN</td>
-          </tr>
-          <tr>
-            <th>Token Symbol</th>
-            <td>SPERMO</td>
-          </tr>
-          <tr>
-            <th>Max Supply</th>
-            <td>21,000</td>
-          </tr>
-          <tr>
-            <th>Blockchain</th>
-            <td>Polygon</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="add">
-      <div class="chart">
-        <h2>Token Allocation</h2>
-        <table>
-          <tr>
-            <th>Pre-Sale</th>
-            <td>None</td>
-          </tr>
-          <tr>
-            <th>Premined</th>
-            <td>None</td>
-          </tr>
-          <tr>
-            <th>Marketing</th>
-            <td>2,000 SPERMO</td>
-          </tr>
-          <tr>
-            <th>Development</th>
-            <td>3'000 SPERMO</td>
-          </tr>
-          
-          <tr>
-            <th>Liquidity</th>
-            <td>2000 SPERMO</td>
-          </tr>
-          <tr>
-            <th>Liquidity</th>
-            <td>Will be lock for 5 years</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <div class="started">
-
-  <p class="started-boldtext">
-  ___________FAQS___________
-  </p>
-  </div>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-<div class="question">
-  <h3>What is SPERMO?</h3>
-  <div class="answer">
-    <p style="font-weight: bold; color: #6C5DD3;">
-      SPERMO is an innovative NFT and Crypto project that aims to provide passive income to NFT and Crypto investors without the need to trade their assets.</p>
-  </div>
-</div>
-
-<div class="question">
-  <h3> What is SPERMO TOKEN?</h3>
-  <div class="answer">
-<p style="font-weight: bold; color: #6C5DD3;">
-SPERMO TOKEN is a cryptocurrency that is built on the Polygon blockchain, which is a layer-2 scaling solution for Ethereum. The token is designed to be deflationary, which means that the supply of tokens decreases over time. This is achieved by burning a portion of the tokens with each transaction.
-   SPERMO TOKEN is the utility token of the ONCHAINSPERM ecosystem, serving as a means of payment and governance. It is a cryptocurrency with a maximum supply of 21,000, and its holders have a say in the decision-making processes related to the development of the ecosystem. SPERMO TOKEN is used as a means of exchange for services and products within the ONCHAINSPERM ecosystem.
-    </p>
-  </div>
-</div>
-  
-<div class="question">
-  <h3>Can I get SPERMO TOKEN for Free?</h3>
-  <div class="answer">
-<p style="font-weight: bold; color: #6C5DD3;">
-  No! and Yes!, SPERMO TOKEN is distributed to the 777 ONCHAINSPERM NFT holders everyday for 5 years and in order to get the SPERMO TOKEN all you need to do is first buy the NFT and then after buying the NFT you will receive your SPERMO TOKEN everyday, it will cost you for buying the NFT at first but that NFT will give you Free SPERMO TOKEN everyday for 5 years.</p>
-<p style="font-weight: bold; color: #6C5DD3;">
-  You don't need to stake! the Tokens will be automatically sent directly to the wallet that holding the NFT</p>
-  </div>
-</div>
-
-<div class="question">
-  <h3>Do SPERMO TOKEN have a Utility?</h3>
-  <div class="answer">
-<p style="font-weight: bold; color: #6C5DD3;">
-  Yes! First, SPERMO TOKEN is the utility token for the development of the ONCHAIN SPERM ecosystem. This means that users who hold SPERMO TOKEN will be able to use it within the ONCHAIN SPERM platform, potentially to access services, make transactions, or participate in governance activities.</p>
-<p style="font-weight: bold; color: #6C5DD3;">
-Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future development. This indicates that SPERMO TOKEN holders may receive MATIC Tokens as a reward for holding and using SPERMO TOKEN within the ONCHAINSPERM ecosystem.</p>
-  </div>
-</div>
-
-<div class="question">
-  <h3>How to buy NFT?</h3>
-  <div class="answer">
-<p style="font-weight: bold; color: #6C5DD3;">
-  To start earning passive SPERMO TOKEN you can buy NFT <a href="https://opensea.io/collection/onchain-sperm">here</p></a>
-<p style="font-weight: bold; color: #6C5DD3;">
-  Connect your Wallet to the Opensea choose the NFT you like and tap Buy,Check Tutorial<a href="./earnspermotoken"> here</p></a>
-  </div>
-</div>
-
-<div class="question">
-  <h3>Do ONCHAINSPERM NFT have a Utility?</h3>
-  <div class="answer">
-<p style="font-weight: bold; color: #6C5DD3;">
-  Yes! it is use to access Airdrops,Giveaways,Private events,Private Websites-it act as a key to access  a lock content.</p>
-<p style="font-weight: bold; color: #6C5DD3;">
-  It can yield passive cryptocurrency it provides passive income to its owner.</p>
-    
-  </div>
-</div>
-
-<div class="question">
-  <h3>Does SPERMO TOKEN have a Presale?</h3>
-  <div class="answer">
-<p style="font-weight: bold; color: #6C5DD3;">
-  No! SPERMO TOKEN has a max supply of 21,000 and there is no pre-mined token.</p>
-<p style="font-weight: bold; color: #6C5DD3;">
-  But we will will provide liquidity for people to start trading our SPERMO TOKEN and you can still get SPERMO TOKEN just by holding NFT on your wallet.
-    Its Supply will come from all of the NFT holders and grows over time.</p>
-<p style="font-weight: bold; color: #6C5DD3;">
-  Even We the creator cannot mint a new  token for our self, since the launching of SPERMO TOKEN is FAIR. It requires the creator to hold its own NFT in-order to get its own token.</p>
-  </div>
-</div>
-
-      
       <div class="started">
         <p class="started-boldtext">What Make's ONCHAINSPERM NFT Unique from other NFT collectibles?</p>
         <p class="started-slimtext">Unlike from other NFT collectibles were they just simply minted on Opensea or stored their NFT images and metadata on the IPFS, ONCHAINSPERM NFT do not rely on any storage provider like IPFS  Because ONCHAINSPERM NFT does stored its images and metadata solely and directly on the blockchain, in other words the nft image is actually stored,cannot be touched nor delete by anyone cause its immutable inside the blockchain.</p><p class="started-slimtext">It has the ability to yield Cryptocurrency just by holding on wallet, Unlike to other NFT collectible were they just simply bought and hold this NFT can be traded and also generate crypto just by holding.</p>
@@ -1575,7 +1025,7 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
         </div>
         <div class="discover-items">
           <div class=item>
-            <img class="item-img" src="mic.png" alt="unsplash-OG44d93i-NJk" border="0">
+            <img class="item-img" src="oncnft.png" alt="unsplash-OG44d93i-NJk" border="0">
             <div class="item-title">
               <p>50% of this NFT image is generated from the blockchain and the 50% remaining is created by my own hand. This NFT is completely made of codes and stored directly on the blockchain no IPFS or any centralized storage provider only blockchain!</p>
             
@@ -1593,161 +1043,15 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
           <div class=item>
             <img class="item-img" src="spermatic.png" border="0">
             <div class="item-title">
-              <p>One of the unique feature of ONCHAINSPERM NFT is the ability to yield cryptocurrency, this is done every 24hrs. And SPERMO TOKEN is the Cryptocurrency that can be earned by holding this NFT.
-              Learn more about SPERMO TOKEN <a href="./whitepaper">here</a></p>
+              <p>One of the unique feature of ONCHAINSPERM NFT is the ability to yield cryptocurrency, this is done every 24hrs. And SPERMO TOKEN is the Cryptocurrency that can be earned by holding this NFT Learn more about SPERMO TOKEN <a href="./whitepaper">here</a></p>
        
             </div>
-
-<p>
-  
-</p>
 
 
       <div class="footer">
         <div class="footer-main">
           ONCHAINSPERM NFT brings an innovative way to earn crypto without staking or selling your NFTs. Buying and holding an NFT that can yield and worth $1 dollar is not a risky descision
-         however we are not a financial adviser and do not take this as a financial advise always do your own research and always count your own risk! </div>
-
-
-
-	<div style="text-align:center;">
-<div class="footer-main">
-	<h2 >Automated Smart Contract Audit
-	</h2></div>
-<div class="partners">
-    <a href="https://www.cyberscope.io/cyberscan?network=MATIC&address=0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127">
-        <img src="cyberscope.jpg" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-<div class="footer-main">
-	<h2 >Echosystem
-	</h2></div>
-<div class="partners">
-    <a href="https://polygonscan.com/token/0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127">
-        <img src="polygon.png" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-<p>
-  
-</p>
-<div class="partners">
-    <a href="https://opensea.io/collection/onchain-sperm">
-        <img src="opensea.jpg" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-<p>
-  
-</p>
-<div class="partners">
-    <a href="https://rarible.com/onchainsperm">
-        <img src="rarible.jpg" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-         <p>
-           
-         </p>
-         <p>
-           
-         </p>
-         <p>
-           
-         </p>
-        
-<div class="footer-main">
-         <h2> Team</h2></div>
-<div style="text-align:center;">
-  <img id="profile-img" src="creatorlogo.jpg" width="150" height="auto">
-<div style="display: flex; justify-content: center;">
-  <a href="https://twitter.com/criptotradeir">
-    <img src="twitter.png" alt="Twitter logo" width="32" height="32">
-  </a>
-  
-</div>
-<p style="font-weight: bold;">
-  Kevin Deniega</p>
-  <a href="./team">
-<p style="font-weight: bold;">
-  <a href="./team">Details</p>
-  </a>
-<p style="font-weight: bold; color: pink;">
-  Creator</p>
-<p style="font-weight: bold; color: pink;">
-  Developer</p>
-
-		</div>
-
-
-<div style="text-align:center;">
-  <img id="profile-img" src="market.jpg" width="150" height="auto">
-<div style="display: flex; justify-content: center;">
-  <a href="*">
-    <img src="twitter.png" alt="Twitter logo" width="32" height="32">
-  </a>
-  
-</div>
-<p style="font-weight: bold;">
-  June Montejo</p>
-<p style="font-weight: bold; color: pink;">
-  Marketing Head</p>
-
-		</div>
-
-	<div style="text-align:center;">
-  <h2>YOU CAN FIND US ON</h2>
-</div>
-<div style="text-align:center;">
-
-<div class="social-icons">
-  <a href="https://www.facebook.com/profile.php?id=100091389517044" target="_blank">
-    <div class="button">
-      <img src="facebook.png" alt="Facebook" />
-    </div>
-  </a>
-  <a href="https://twitter.com/onchainsperms?t=i1K4JjmA0OnlhoORVLl5VQ&s=09" target="_blank">
-    <div class="button">
-      <img src="twitter.png" alt="Twitter" />
-    </div>
-  </a>
-  <a href="https://instagram.com/onchainsperm?igshid=ZDdkNTZiNTM=" target="_blank">
-    <div class="button">
-      <img src="instagram.png" alt="Instagram" />
-    </div>
-  </a>
-  <a href="https://discord.gg/uMYCXY59Qz" target="_blank">
-    <div class="button">
-      <img src="discord.png" alt="Discord" />
-    </div>
-  </a>
-<a href="https://medium.com/@criptotrader32" target="_blank">
-    <div class="button">
-      <img src="medium.jpg" alt="Medium" />
-    </div>
-  </a>
-<a href="https://t.me/+xeH3ago1n2M4ZWRl" target="_blank">
-    <div class="button">
-      <img src="telegram.jpg" alt="Telegram" />
-    </div>
-  </a>
-</div>
-</div>
-	<div style="text-align:center;">
-<p style="font-weight: bold; color: pink;">
-  Get Support</p>
-
-<a href="https://onchainsperm.github.io/support.html"><p
-style="font-weight: bold; color: blue;">Click Here</p></a>
-</div>
-
-         
-         
+         however i am not a financial adviser and do not take this as a financial advise always do your own research and always count your own risk! </div>
         <div class="footer-navigate">
           <div class="nav">
             <h5>Marketplace</h5>
@@ -1757,147 +1061,31 @@ style="font-weight: bold; color: blue;">Click Here</p></a>
           </div>
           <div class="nav">
             <h5>Creator</h5>
-            <a href="./about" ><p>About Us</p></a>
+            <a href="https://twitter.com/criptotradeir?t=tZ6cJqJDL-IA6wZ-z7gRvQ&s=09" ><p>About Us</p></a>
 
           </div>
           <div class="nav">
-            <h5>Socials</h5>
+            <h5>Contact</h5>
             <a href="https://www.facebook.com/profile.php?id=100091389517044">
             <p>Facebook</p></a>
             <a href="https://instagram.com/onchainsperm?igshid=ZDdkNTZiNTM=">
             <p>Instagram</p></a>
             <a href="https://discord.gg/uMYCXY59Qz">
             <p>Discord</p></a>
-            <a href="https://medium.com/@criptotrader32"
-            ><p>Medium</p></a>
             <a href="https://twitter.com/onchainsperms?t=rG0KyVwdG_Spq9ADrpO1VQ&s=09"
             ><p>Twitter</p></a>
             <a href="./support">
             <p>Email</p></a>
           </div>
-          <div class="nav">
-            <h5>Policies</h5>
-   <p>
-      <a href="./terms of service">Terms of Service</a>
-   </p>
-   <p>
-      <a href="./privacy policy">Privacy Policy</a>
-   </p>
-   <p>
-      <a href="./coockies policy">Coockies Policy</a>
-   </p>
-<a href="#" id="open_preferences_center">Update cookies preferences</a>
-  <p style="font-size: 8px;">&copy; 2023 ONCHAIN SPERM. All rights reserved.</p>
-
-          </div>
         </div>
       </div>
 
+      <div class="footer2">
+        <div></div>
+
+        <p>Copyright 2023 ONCHAINSPERM</p>
 
       </div>
     </div>
-    
-    
-    
-<script>
-const questions = document.querySelectorAll('.question');
-
-questions.forEach(function(question) {
-  const questionHeader = question.querySelector('h3');
-  questionHeader.addEventListener('click', function() {
-    console.log('Question clicked!');
-    question.classList.toggle('open');
-  });
-});
-
-
-</script>
-<script>
-function myFunction() {
-  // do something when the link is clicked
-}
-</script>
-<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"dark","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"ONCHAIN SPERM"});
-});
-</script>
-
-<!-- ONCHAIN SPERM -->
-  <script type="text/plain" data-cookie-consent="functionality">
-    function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
-      var expires = "expires="+ d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
-    function getCookie(cname) {
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-
-    function acceptCookies() {
-      setCookie("cookieConsent", "accepted", 365);
-      hideBanner();
-    }
-
-    function declineCookies() {
-      setCookie("cookieConsent", "declined", 365);
-      hideBanner();
-    }
-
-    function hideBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "none";
-    }
-
-    function showBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "block";
-    }
-
-    window.onload = function() {
-      if (getCookie("cookieConsent") == "accepted") {
-        hideBanner();
-      } else {
-        showBanner();
-      }
-    }
-  </script>
-<!-- end of ONCHAIN SPERM-->
-
-<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
-<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-
-
-
-
-
-<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
-
-
-
-  <div id="cookie-banner">
-    <p>This website uses cookies to improve your experience. By clicking "Accept", you consent to the use of cookies.</p>
-    <button onclick="acceptCookies()">Accept</button>
-    <button onclick="declineCookies()">Decline</button>
-  </div>
-
-</div>
-
   </body>
 </html>

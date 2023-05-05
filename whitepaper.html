@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Whitepaper</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #fff;
+		margin: 30px;
+		padding: 0;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-family: inherit;
+		font-weight: bold;
+		line-height: 1.2;
+		margin-top: 0;
+		margin-bottom: 20px;
+		color: #000;
+	}
+	
+	p {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	
+	section {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	
+	/* Media queries for mobile devices */
+	@media only screen and (max-width: 600px) {
+		body {
+			font-size: 14px;
+		}
+		
+		h1 {
+			font-size: 24px;
+		}
+		
+		h2 {
+			font-size: 20px;
+		}
+		
+		p {
+			font-size: 14px;
+		}
+		
+		section {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+	
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  vertical-align: top;
+}
+
+.caterpillar-container {
+  position: relative;
+  width: 400px;
+  height: 50px;
+  margin: 50px auto;
+}
+
+.caterpillar-segment {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #77dd77;
+  border-radius: 50%;
+  animation: caterpillar-move 4s ease-in-out infinite;
+}
+
+.caterpillar-segment:nth-child(2) {
+  left: 60px;
+  animation-delay: 0.3s;
+}
+
+.caterpillar-segment:nth-child(3) {
+  left: 120px;
+  animation-delay: 0.6s;
+}
+
+.caterpillar-segment:nth-child(4) {
+  left: 180px;
+  animation-delay: 0.9s;
+}
+
+.caterpillar-segment:nth-child(5) {
+  left: 240px;
+  animation-delay: 1.2s;
+}
+
+.caterpillar-segment:nth-child(6) {
+  left: 300px;
+  animation-delay: 1.5s;
+}
+
+.caterpillar-segment:nth-child(7) {
+  left: 360px;
+  animation-delay: 1.8s;
+}
+
+@keyframes caterpillar-move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contract-address {
+  font-family: monospace;
+  color: red;
+}
+
+.label-blue {
+  color: blue;
+}
+</style>
+<style>
+  .glow-border {
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
+    }
+    to {
+      box-shadow: 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020;
+    }
+  }
+	
+.box {
+  
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.box {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid black;
+}
+.container {
+  position: relative;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px; /* adjust the size as needed */
+}
+#profile-img {
+    width:70px;
+    height:auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+   }
+
+	
+</style>
+
+</head>
+<body>
+	<header>
+	<div style="text-align:center;">
+		<h1>WHITEPAPER</h1>
+		</div>
+	</header>
+	<div style="text-align:center;">
+	<main>
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
+<p>
+ 
+spermotoken@gmail.com
+https://spermotoken.github.io
+</p>
+<p>
+
+</p>
+<p>
+  
+</p>
+<section>
+<div class="box" onclick="handleClick()">
+  <span class="arrow">&#8599;</span>
+  <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">SPERMO TOKEN Docs</a></p>
+</div>
+
+<script>
+  function handleClick() {
+    // Handle the click event here
+    window.location.href = "./spermotokendocs";
+  }
+</script>
+
+
+</section>
+<p>
+  
+</p>
+		<section>
+			<h2>INTRODUCTION</h2>
+			<p>NFTs, or non-fungible tokens, are unique digital assets that are stored on a blockchain. Each NFT is a unique and one-of-a-kind digital asset that is verifiable and transferable.<p/>
+			<p>NFTs have gained popularity in recent years as they can represent a wide variety of digital assets such as artwork, music, videos, and even virtual real estate.</p>
+
+<p>One specific type of NFT is a yield-generating NFT. This type of NFT allows holders to earn a yield, or passive income, simply by holding the NFT. Unlike other types of yield-generating tokens, such as staking tokens, where the yield is generated through staking or locking up the tokens, these NFTs generate yield solely through ownership.</p>
+
+<p>The specific mechanism for generating yield through these NFTs varies depending on the project. However, it typically involves distributing a portion of the project's revenue to the NFT holders. This can be done through a variety of methods, such as taking a percentage of sales, royalties from licensing, or other revenue streams generated by the project.
+</p>
+<p>
+Overall, yield-generating NFTs are an innovative way for investors to earn a passive income through digital ownership of unique assets. As with any investment, it is important to do your own research and understand the risks and potential rewards before investing in any NFT project.
+</p>
+
+</p>
+<h2>ABOUT ONCHAINSPERM and SPERMO TOKEN
+  
+</h2>
+			<p>Welcome to the world of ONCHAIN SPERM NFT and SPERMO Token, where you can experience the unique combination of blockchain technology and biological science. 
+       </p>
+       <p>
+One of the most exciting features of our ONCHAINSPERM NFT is its yielding feature. This means that by simply holding onto your NFT, you can earn rewards in the form of our SPERMO Token. This incentivizes long-term holding and creates a sense of community amongst our users.</p>
+<p>
+The SPERMO Token is an integral part of our platform, and serves as the reward for holding onto your ONCHAINSPERM NFT. This token can be used to purchase more NFTs on our platform, or traded on various cryptocurrency exchanges. By holding SPERMO Tokens, you not only have access to our exclusive NFTs, but also have the opportunity to participate in our ecosystem and earn even more rewards.
+</p>
+<p>
+With ONCHAINSPERM NFT and SPERMO Token, we offer a new and exciting way to engage with blockchain technology, while also providing a unique way to explore the world of biological science. Join us on our journey and become a part of our community today!</p>
+
+		</section>
+		<section>
+			<h2>NFT AND TOKEN PROBLEMS</h2>
+			<p>The problem that NFTs aim to solve is creating unique and verifiable digital assets that can be easily bought, sold, and traded on a blockchain. NFTs have opened up a whole new world of digital ownership, enabling people to own one-of-a-kind digital assets such as art, music, and even virtual real estate.</p>
+<p>
+However, one issue with NFTs is that they often lack utility beyond being a collectible. This means that once the NFT is purchased, the owner may not be able to do much with it except hold onto it or resell it.
+</p>
+<p>
+This is where yield-generating NFTs come in, like the ONCHAINSPERM NFT. By creating a SPERMO token and providing liquidity through yielding, the ONCHAIN SPERM NFT solves the problem of lack of utility by enabling holders to earn a passive income simply by holding the NFT. This incentivizes people to hold onto the NFT rather than just reselling it, as they can benefit from the yield generated by the SPERMO token.
+</p>
+<p>
+Overall, yield-generating NFTs like the ONCHAINSPERM NFT provide a solution to the lack of utility problem in the NFT market, by enabling holders to benefit from their digital ownership beyond just collecting or reselling.
+</p>
+
+
+
+
+</p>
+			<p></p>
+		</section>
+		<section>
+			<h2>SOLUTION TO NFT AND TOKEN PROBLEMS</h2>
+			<p>Firstly, the ONCHAINSPERM NFT represents a unique digital asset that can be bought, sold, and traded on the blockchain.</p>
+			<p>It has a yielding feature, which means that it generates a passive income for the holder over time. This creates an inherent utility for the NFT, as it provides a way for people to earn a return on their investment without having to actively manage it.</p>
+<p>
+Secondly, the SPERMO Token is a reward token for holding the ONCHAINSPERM NFT. When someone holds the NFT, they are rewarded with SPERMO Tokens, which can be used for staking. Staking is the process of holding tokens in a cryptocurrency wallet to support the operations of a blockchain network. By staking their SPERMO Tokens, holders can earn additional rewards in the form of another token.</p>
+<p>
+This creates multiple layers of utility for both the ONCHAINSPERM NFT and the SPERMO Token. The NFT itself provides a passive income stream, while the SPERMO Token incentivizes people to hold the NFT and participate in the staking process. Additionally, the staking process helps to secure the network and provides a way for people to earn additional rewards for supporting it.</p>
+<p>
+Overall, the combination of the yielding feature in the ONCHAINSPERM NFT and the staking rewards provided by the SPERMO Token helps to solve the problem of NFT and Token Utilities by providing multiple layers of utility for both assets.</p>
+			<p></p>
+		</section>
+		<section>
+			<h2>MARKET ANALYSIS</h2>
+			<p>The NFT market has experienced a significant boom in recent years, with the total value of NFT transactions increasing rapidly. According to NonFungible.com, the NFT market's total value reached $10.7 billion in 2021, compared to just $94 million in 2017. This growth is due to increased mainstream adoption of NFTs, especially in the art and gaming industries.</p>
+<p>
+The ONCHAINSPERM NFT and SPERMO Token project has the potential to generate demand from several areas. Firstly, the use of a yielding feature and the ability to stake SPERMO Tokens to earn another token will attract investors looking to earn a passive income. Additionally, the use of NFTs in the adult industry is a largely untapped market, with limited competition.</p>
+<p>
+Currently, the NFT market is saturated with projects, and the competition is high. However, the ONCHAIN SPERM NFT and SPERMO Token project stands out due to its unique concept of combining NFTs and adult content.</p>
+<p>The yielding feature and the ability to stake SPERMO Tokens to earn another token add an additional layer of utility to the project, setting it apart from other NFT projects in the adult industry. Overall, the project has the potential to attract a niche market, and its unique features may give it an edge over the competition.</p>
+
+		</section>
+		<section>
+			<h2>SMART CONTRACTS</h2>
+			<p>
+<p style="font-weight: bold;">
+			  The ONCHAINSPERM NFT smart contract</p> Has a maximum supply of 777 tokens, which means that once all 777 tokens are minted, no more tokens can be created. </p>
+			<p>The smart contract includes functions for minting and transferring ONCHAINSPERM NFTs, as well as any associated metadata such as the name, image, and description of the NFT.</p>
+<p>
+Since the smart contract is on the Polygon chain, it may provide faster transaction speeds and lower gas fees compared to the Ethereum mainnet. Additionally, the ONCHAINSPERM NFT may benefit from the interoperability and compatibility with other projects on the Polygon chain.</p>
+<p>
+Overall, the technical details of ONCHAINSPERM NFT on Polygon chain include a limited supply of 777 tokens, a smart contract for ON-CHAIN NFTs, and the potential benefits of the Polygon chain.</p>
+			<p>
+      <p style="font-weight: bold;">
+			  The SPERMO Token smart contract</p> Likely includes functions such as minting and transfer of the token, as well as setting the maximum supply of 21,000 tokens.</p>
+			<p>The smart contract also likely includes a function to receive the call from the airdrop smart contract that triggers the minting of new SPERMO Tokens and sends them to ONCHAINSPERM NFT holders.</p>
+<p>
+  In addition the SPERMO TOKEN SMART CONTRACT also include burn function,
+  just incase the SPERMO Community ask to burn some of SPERMO TOKEN in the future.
+</p>
+<p>
+<p style="font-weight: bold;">
+The airdrop smart contract</p> Likely includes a function that calls the minting function on the SPERMO Token smart contract every 24 hours, which results in the creation of new SPERMO Tokens that are sent to ONCHAINSPERM NFT holders. The airdrop smart contract likely verifies the ownership of ONCHAINSPERM NFTs and ensures that only holders of the NFT receive the SPERMO Token rewards.</p>
+<p>
+The tokenomics of the project include the limited supply of SPERMO Tokens, which can only be minted through ONCHAIN NFT and distributed as a reward to holders of ONCHAINSPERM NFTs.</p>
+<p>This creates scarcity and potentially increases the value of both the NFTs and the SPERMO Tokens. Additionally, the ability to stake the NFT and receive SPERMO Token rewards provides an incentive for users to hold onto the NFT, which can further increase its value.</p>
+			<p>
+			  
+			</p>
+			<h2>SPERMO TOKEN</h2>
+			<p>
+      <p style="font-weight: bold;">
+			  Token Name:</p> SPERMO TOKEN</p>
+
+<p>
+<p style="font-weight: bold;">
+  Token Purpose:</p> SPERMO Token is the reward token for holding ONCHAINSPERM NFT and SPERMO TOKEN can yield MATIC Token and STAKE to earn more Tokens in the future.The SPERMO TOKEN is the Governance Token for the ONCHAIN SPERM echosystem,earn yield for holding this Token is one of its feature.</p>
+<p>
+<p style="font-weight: bold;">
+Token Supply:</p> The maximum supply of SPERMO Token is 21,000.</p>
+<p>
+<p style="font-weight: bold;">
+Token Distribution:</p> SPERMO Tokens can only be minted through the ONCHAINSPERM NFT. The number of SPERMO Tokens minted per day is 11.50737 (from all 777 ONCHAIN SPERM NFT), and this rate will continue for 5 years.<p>This Token will be distributed to all 777 ONCHAINSPERM NFT holders every 24 hours for 5 years,So if you are holding the NFT you are going to receive the said Token everyday </p>
+<p>And this is done by the AIRDROP SMART CONTRACT</p>
+</p>
+<p>
+<p style="font-weight: bold;">
+Token Distribution to Creator:</p> Even the creator of this project will need to hold the NFT in order to receive their own SPERMO Tokens.</p>
+<p>
+<p style="font-weight: bold;">
+Token Utility:</p> SPERMO Tokens can be used for a variety of purposes, depending on the ecosystem in which they are used. For example, they could be used to access exclusive content or features, or to participate in governance decisions and staking.</p>
+<p>
+<p style="font-weight: bold;">
+Token Value:</p> The value of SPERMO Tokens will depend on a variety of factors, including demand for the underlying ONCHAINSPERM NFTs, the overall popularity of the project, and the utility of the tokens themselves.</p>
+<p>
+Overall, the tokenomics of the SPERMO TOKEN project seem to be designed to encourage the creation and ownership of the ONCHAINSPERM NFTs, while also providing additional benefits to those who hold the associated SPERMO Tokens.</p>
+<p>However, as with any NFT project, the success of SPERMO will ultimately depend on factors such as community engagement, demand for the NFTs and tokens, and overall market conditions.</p>
+<h2>
+  TOKENOMICS
+</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Token Name</th>
+      <th>SPERMO TOKEN</th>
+    </tr>
+    <tr>
+      <th>Token Symbol</th>
+      <th>SPERMO</th>
+    </tr>
+    <tr>
+      <th>Chain</th>
+      <th>Polygon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Maximum Supply</td>
+      <td>21,000</td>
+    </tr>
+    <tr>
+      <td>Pre-mined</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Launch Type</td>
+      <td>Fair</td>
+    </tr>
+    <tr>
+      <td>Distribution</td>
+      <td>0.01481 SPERMO every 24 hours to all 777 ONCHAINSPERM NFT holders for 5 years</td>
+    </tr>
+    <tr>
+      <td>Token Allocation</td>
+      <td>Pre-Sale: None<br>Marketing: 2000<br>Development: 3000 <br>Liquidity Pool: 2000</td>
+    </tr>
+    <tr>
+      <td>Lockup</td>
+      <td>Liquidity locked for 5 years</td>
+    </tr>
+  </tbody>
+</table>
+<h2>DAILY MINTED SPERMO TOKEN</h2>
+<h2>777 NFT = 11.50737 SPERMO
+<p>( 1 NFT = 0.01481 SPERMO )</p>
+<p>(Every 24 Hours)</p>
+</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Timeframe</th>
+      <th>SPERMO Token Supply</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Day 1</td>
+      <td>11.50737</td>
+    </tr>
+    <tr>
+      <td>Day 2</td>
+      <td>23.01474</td>
+    </tr>
+    <tr>
+      <td>Day 3</td>
+      <td>34.52211</td>
+    </tr>
+    <tr>
+      <td>Day 4</td>
+      <td>46.02948</td>
+    </tr>
+    <tr>
+      <td>Day 5</td>
+      <td>57.53685</td>
+    </tr>
+    
+    <tr>
+      <td>Day 1825</td>
+      <td>21,000.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tr>
+    <td class="label-blue">Contract Address:</td>
+    <td><span class="contract-address">0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127</span></td>
+  </tr>
+</table>
+
+		</section>
+		<section>
+			<h2>USE CASES</h2>
+			<p>The SPERMO Token and ONCHAINSPERM NFT project has multiple use cases across different industries.</p>
+<p>
+Firstly, the SPERMO Token can be used for staking, which means holding the tokens in a wallet to support the network and earn rewards.</p>
+<p>This can benefit industries that require secure and transparent payment systems, such as e-commerce, gaming, and financial services.</p>
+<p>
+Secondly, the ONCHAINSPERM NFT can be used to mint SPERMO Tokens, which act as a key for airdrops and giveaways.</p>
+<p>This feature can be attractive to marketing and advertising industries that are looking for innovative ways to engage customers and promote their products or services. Additionally, the ONCHAIN SPERM NFT can be used as a unique digital asset, which can be sold or traded in the art and collectibles industry.</p>
+<p>
+Overall, the SPERMO Token and ONCHAINSPERM NFT project has the potential to benefit a variety of industries, including e-commerce, gaming, financial services, marketing, advertising, art, and collectibles. By leveraging the benefits of blockchain technology, such as security, transparency, and immutability, this project offers unique and valuable use cases for both businesses and consumers.</p>
+			<p>
+			  
+			</p>
+		</section>
+		
+		<section>
+		  <h2>
+		    ROADMAP
+		  </h2>
+		  <p>
+    <p style="font-weight: bold;">
+		    1. CONCEPT DEVELOPMENT
+		    </p>
+       Create NFTs that generate cryptocurrency rewards for the owner.
+		    </p>
+    <p style="font-weight: bold;">
+		    2. NFT CREATION
+		    </p>
+		    Deploying a Smart Contract to mint NFTs
+		    </p>
+    <p style="font-weight: bold;">
+		    3. SMART CONTRACT DEVELOPMENT
+		    </p>
+		    Creating Smart contracts to support and bring utilities to the minted NFTs.
+		    </p>
+    <p style="font-weight: bold;">
+		    4. METADATA CREATION
+		    </p>
+		    In this case both of the metadata and Images of the NFT are stored directly on the blockchain and not to IPFS,Making everything to be 100% On-chain.
+		    </p>
+    <p style="font-weight: bold;">
+		    5. SPERMO Uniswap LISTING
+		    </p>
+Uniswap listing refers to the process of adding a new cryptocurrency token to the Uniswap decentralized exchange (DEX). Uniswap is a decentralized trading platform that allows users to buy and sell cryptocurrencies without relying on a centralized exchange.</p>
+<p>
+When a new cryptocurrency token is added to Uniswap, it becomes available for trading on the platform, which allows users to swap it for other cryptocurrencies or trade it for fiat currency.
+		    </p>
+    <p style="font-weight: bold;">
+		    6. SPERMO Quickswap LISTING
+		    </p>
+   Quickswap listing refers to the process of adding a new cryptocurrency token to the Quickswap decentralized exchange (DEX). Quickswap is a decentralized trading platform that allows users to buy and sell cryptocurrencies without relying on a centralized exchange.</p>
+<p>
+   When a new cryptocurrency token is added to Quickswap, it becomes available for trading on the platform, which allows users to swap it for other cryptocurrencies or trade it for fiat currency.
+		    
+		    </p>
+    <p style="font-weight: bold;">
+		    7. SPERMO TOKEN MINTING
+		    </p>
+		    <p>
+		      MINTING TOKEN AND DISTRIBUTING TO NFT HOLDERS,
+     The statement is describing a unique feature of the SPERMO token, where the token is minted every day by a separate smart contract. This means that new SPERMO tokens are generated and added to the existing supply on a daily basis.
+		    </p>
+		    <p>
+      Furthermore, the newly minted SPERMO tokens are distributed to the NFT (Non-Fungible Token) smart contract.
+		    </p>
+		    <p>
+		      And who ever hold the NFT will receive the minted token everyday
+		    </p>
+    <p style="font-weight: bold;">
+		    8. ADD LIQUIDITY TO UNISWAP
+		    </p>
+		    <p>
+       Adding liquidity to Uniswap means providing a certain amount of two different cryptocurrencies to a Uniswap pool. Without Liquidity,even the token is listed on uniswap it cannot be traded.
+       in this case we are going to provide liquidity to SPERMO TOKEN on Uniswap and locked the liquidity pool for 5 years. Locking the liquidity pool means that we cannot withdraw the liquidity pool, We do it to give security into our investors that we are not going to run away that will result to rugpull.
+		    </p>
+		    </p>
+    <p style="font-weight: bold;">
+		    9. ADDING LIQUIDITY TO QUICKSWAP
+		    </p>
+      Adding liquidity to Quicswap means providing a certain amount of two different cryptocurrencies to a Quickswap pool. Without Liquidity,even the token is listed on Quickswap it cannot be traded.
+       in this case we are going to provide liquidity to SPERMO TOKEN on Quickswap and locked the liquidity pool for 5 years. Locking the liquidity pool means that we cannot withdraw the liquidity pool, We do it to give security into our investors that we are not going to run away that will result to rugpull.
+		    </p>
+    <p style="font-weight: bold;">
+		    10. CoinMarketCap LISTING
+		    </p>
+		    <p>
+        CoinMarketCap is a website that displays information about different cryptocurrencies, like Bitcoin or Ethereum. When a cryptocurrency is "listed" on CoinMarketCap, it means that it has met certain requirements and is now included on the website for people to view its price, market capitalization, trading volume, and other data. Being listed on CoinMarketCap can help increase a cryptocurrency's visibility and credibility in the market.
+		    </p>
+		    <p>
+       <p style="font-weight: bold;">
+		    Listing ON CoinMarketCap can:
+		    </p>
+		    </p>
+		    <p>
+    <p style="font-weight: bold;">
+         Increased Visibility</p> CoinMarketCap is a popular website for cryptocurrency investors and enthusiasts, so listing your token on the platform can help increase its visibility and exposure to potential investors.</p>
+        <p>
+    <p style="font-weight: bold;">
+         Credibility</p> Being listed on CoinMarketCap can help add credibility to your project and signal to investors that your token has been vetted and meets certain standards.</p>
+        <p>
+    <p style="font-weight: bold;">
+          Access to Market Data</p> CoinMarketCap provides real-time data on the prices, trading volume, and market capitalizations of cryptocurrencies, which can be helpful for monitoring market trends and making informed investment decisions.</p>
+         <p>
+    <p style="font-weight: bold;">
+          Potential for Increased Liquidity</p> If your token is listed on CoinMarketCap, it may become more accessible to a wider range of investors, which could increase trading volume and liquidity.
+		    </p>
+    <p style="font-weight: bold;">
+		    11. CoinGecko LISTING
+		    </p>
+		    Listing on CoinGecko is the same with listing on CoinMarketCap
+		    and we aim to list SPERMO TOKEN on CoinGecko.
+		    </p>
+    <p style="font-weight: bold;">
+		    12. CEX LISTING
+		    </p>
+		    <p>
+		      We aim to list SPERMO TOKEN into the Centralized Exchange (CEX) Like Kucoin,Binance,MEXCGlobal in the future in order to bring more investors and wider visibility for the SPERMO TOKEN.
+		    </p>
+		    <p>
+       CEX listing refers to the process of a cryptocurrency exchange adding a new digital asset to their platform, making it available for trading among their users. It's similar to a company listing its stock on a stock exchange. Once a cryptocurrency is listed on a CEX (centralized exchange), users can buy, sell, and trade it using the exchange's platform and services.
+		    </p>
+    <p style="font-weight: bold;">
+		    13. SPERMO - Yielding MATIC
+		    </p>
+		    <p>
+		      In the future we are going to develop the yielding feature of SPERMO TOKEN.
+		    </p>
+		   <p>
+       The ability to yield MATIC tokens for its holders. This means that simply by holding SPERMO tokens in their wallets, investors can earn additional MATIC tokens without having to actively trade or participate in other activities.
+       This is done automatically with a separate Smart contract that will call the duatribution of MATIC token.</p>
+       <p>
+       To ensure the sustainability of this yielding process, the project has decided to allocate a separate fund that will be dedicated to providing the necessary MATIC tokens for distribution to SPERMO holders. By setting aside this fund, the project can ensure that the yield rewards are consistently available, and that token holders can continue to benefit from this feature over the long term. This is a creative way to incentivize investors to hold SPERMO tokens, and to encourage long-term investment in the project.
+		   </p> 
+		    
+    <p style="font-weight: bold;">
+		    14. NFT STAKING
+		    </p>
+		    <p>
+        The project is planning to develop a decentralized application (DApp) that will allow users to stake their NFTs and earn tokens as a reward. Staking involves holding a particular NFT in a wallet and locking it up for a set period of time in order to support the network and earn rewards. In this case, users can stake their NFTs through the DApp and receive a token as a reward for their participation. The specifics of the staking process and the type of tokens that will be rewarded are yet to be determined, but the goal is to provide an additional incentive for NFT holders to engage with the project and contribute to its success. Overall, the development of this DApp will add another layer of utility and value to the ONCHAIN SPERM ecosystem.
+		    </p>
+		    
+		  </p>
+		</section>
+		<section>
+			<h2>CONCLUSION</h2>
+			<p>The white paper discusses the potential applications of the SPERMO Token and ONCHAINSPERM NFT project across various industries.</p>
+			<p>One potential use case is in the e-commerce industry, where the SPERMO Token can be used as a form of payment or reward for customers. The project also has potential applications in the gaming industry, where NFTs can be used as in-game items or rewards.</p>
+<p>
+In addition, the advertising industry may benefit from the project by utilizing innovative ways to engage customers and promote products or services.</p>
+<p>The ONCHAINSPERM NFT can also be used as a unique digital asset that can be sold or traded in the art and collectibles industry.</p>
+<p>
+Overall, the project leverages the benefits of blockchain technology, such as security, transparency, and immutability, to offer valuable and unique use cases for businesses and consumers. </p>
+<p>The white paper also introduces Kevin Deniega as the project's leader, a farmer and blockchain enthusiast based in the Philippines who can bring unique perspectives to the project.</p>
+
+</section>
+     
+		<section>
+			<h2>TEAM</h2>
+
+		</section>
+     
+	</main>
+	</div>
+
+	<footer>
+	<div style="text-align:center;">
+  <img id="profile-img" src="creatorlogo.jpg" width="150" height="auto">
+<div style="display: flex; justify-content: center;">
+  <a href="https://twitter.com/criptotradeir">
+    <img src="twitter.png" alt="Twitter logo" width="32" height="32">
+  </a>
+</div>
+		</div>
+		</footer>
+<footer>
+	<div style="text-align:center;">
+  <body> 	<p style="font-weight: bold;">
+  Kevin Deniega</p>
+  <a href="./team">
+<p style="font-weight: bold;">
+  <a href="./team">Details</p>
+  </a>
+<p style="font-weight: bold; color: green;">
+  Creator</p>
+<p style="font-weight: bold; color: green;">
+  Developer</p>
+
+	<div style="text-align:center;">
+  <img id="profile-img" src="market.jpg" width="150" height="auto">
+<div style="display: flex; justify-content: center;">
+  <a href="*">
+    <img src="twitter.png" alt="Twitter logo" width="32" height="32">
+  </a>
+</div>
+<p style="font-weight: bold;">
+  June Montejo</p>
+<p style="font-weight: bold; color: green;">
+  Marketing Head</p>
+		</footer>
+
+	<div style="text-align:center;">
+  <img src="mint.jpg" width="300" height="auto"class="glow-border">
+
+
+  <h1>Creator Details</h1>
+	<p><strong>Name:</strong> Kevin Deniega</p>
+	<p><strong>Age:</strong> 29 years old</p>
+
+<p><strong>Crypto Experience:</strong> Trading Cryptocurrencies for 4 years, NFT Space for 2 years</p>
+
+	  
+<body>
+    <h1>ABOUT ME</h1>
+    <p>Hello, my name is Kevin Deniega. I have been involved in the crypto space and NFT space for years now. I have a deep interest in cryptocurrency and blockchain technology, and have been actively trading various cryptocurrencies for many years.</p>
+    <p>Recently, I have been excited to explore the world of NFTs. One of my current projects is ONCHAINSPERM NFT and SPERMO TOKEN, which is my first foray into the world of crypto-based art and collectibles. I am excited to be a part of this innovative and constantly evolving industry, and look forward to seeing where it goes in the future.</p>
+    <p>Thank you for taking the time to learn a bit about me and my interests in the crypto and NFT spaces.</p>
+  </body>
+	  
+	  
+	  </div>
+	  <footer>
+	<div style="text-align:center;">
+  <img src="hold.gif" width="300" height="auto"class="glow-border">
+
+  <p style="font-size: 8px;">&copy; 2023 ONCHAIN SPERM. All rights reserved.</p>
+
+		</div>
+	</footer>
+
+
+</body>
+</html>

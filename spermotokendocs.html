@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SPERMO TOKEN Docs</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #fff;
+		margin: 30px;
+		padding: 0;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-family: inherit;
+		font-weight: bold;
+		line-height: 1.2;
+		margin-top: 0;
+		margin-bottom: 20px;
+		color: #000;
+	}
+	
+	p {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	
+	section {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	
+	/* Media queries for mobile devices */
+	@media only screen and (max-width: 600px) {
+		body {
+			font-size: 14px;
+		}
+		
+		h1 {
+			font-size: 24px;
+		}
+		
+		h2 {
+			font-size: 20px;
+		}
+		
+		p {
+			font-size: 14px;
+		}
+		
+		section {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+	
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  vertical-align: top;
+}
+
+.caterpillar-container {
+  position: relative;
+  width: 400px;
+  height: 50px;
+  margin: 50px auto;
+}
+
+.caterpillar-segment {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #77dd77;
+  border-radius: 50%;
+  animation: caterpillar-move 4s ease-in-out infinite;
+}
+
+.caterpillar-segment:nth-child(2) {
+  left: 60px;
+  animation-delay: 0.3s;
+}
+
+.caterpillar-segment:nth-child(3) {
+  left: 120px;
+  animation-delay: 0.6s;
+}
+
+.caterpillar-segment:nth-child(4) {
+  left: 180px;
+  animation-delay: 0.9s;
+}
+
+.caterpillar-segment:nth-child(5) {
+  left: 240px;
+  animation-delay: 1.2s;
+}
+
+.caterpillar-segment:nth-child(6) {
+  left: 300px;
+  animation-delay: 1.5s;
+}
+
+.caterpillar-segment:nth-child(7) {
+  left: 360px;
+  animation-delay: 1.8s;
+}
+
+@keyframes caterpillar-move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contract-address {
+  font-family: monospace;
+  color: red;
+}
+
+.label-blue {
+  color: blue;
+}
+</style>
+<style>
+  .glow-border {
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
+    }
+    to {
+      box-shadow: 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020, 0 0 3px #fe2020;
+    }
+  }
+	
+.box {
+  
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.box {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid black;
+}
+.container {
+  position: relative;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px; /* adjust the size as needed */
+}
+
+#whitepaper-box .arrrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  transform: rotate(-20deg);
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 25px; /* adjust the size as needed */
+}
+
+	
+</style>
+
+<script>
+  function handleClick(url) {
+    // Handle the click event here
+    window.location.href = url;
+  }
+</script>
+
+</head>
+	<div style="text-align:center;">
+<body>
+  <p>
+    
+  </p>
+  <p>
+    
+  </p>
+<p>
+  
+</p>
+<p>
+  
+</p>
+  <header>
+    <h1>SPERMO TOKEN</h1>
+  </header>
+
+
+<div style="display: flex; justify-content: center;">
+    <img src="spermologo.png" alt="Twitter logo" width="128" height="128">
+</div>
+<p>
+  
+</p>
+<p>
+  
+</p>
+    <p style="font-weight: bold;">
+SPERMO TOKEN</p>
+<p>
+  <p>
+SPERMO TOKEN is a cryptocurrency that is built on the Polygon blockchain, which is a layer-2 scaling solution for Ethereum. The token is designed to be deflationary, which means that the supply of tokens decreases over time. This is achieved by burning a portion of the tokens with each transaction.</p>
+<p>
+One unique feature of SPERMO TOKEN is that all the taxes or fees collected from trades on Uniswap and Quickswap are burned every 30th of the month. This means that a portion of the token supply is removed from circulation on a regular basis, which can potentially increase the value of the remaining tokens.</p>
+<p>
+When someone buys or sells SPERMO TOKEN on Uniswap or Quickswap, a small fee is charged on that transaction. This fee is usually a percentage of the transaction amount and is paid in SPERMO TOKEN. The collected fees are then sent to a burn address and destroyed, which reduces the total supply of SPERMO TOKEN in circulation.</p>
+<p>
+By burning tokens in this way, the supply of SPERMO TOKEN is reduced over time, which can lead to an increase in the token's value. This is because the remaining tokens become more scarce and therefore more valuable.</p>
+<p>
+It is worth noting that burning tokens also has the effect of making the remaining tokens more valuable in the sense that each individual token represents a larger percentage of the total supply. This can create a situation where demand for the token increases, driving up its price.</p>
+<a href="./burntspermo"><p>View burned SPERMO</p></a>
+<p>
+  PLEASE NOTE! that everyday SPERMO TOKEN Smart contract is minting 0.01481 SPERMO TOKEN for each NFT that are being minted and the max supply of SPERMO TOKEN that can be minted by the smart contract is (21,000),Which means the minting will stop when it reaches 21,000 tokens.</p>
+  <img src="minting.png" width="320px" height="auto"class="glow-img"><p>You can verify this code on <a href="https://polygonscan.com/token/0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127#code#L1">PolygonScan</a></p>
+  <p>However Every 30th of the month we are going to burn the SPERMO collected from the tax on the Uniswap and Quickswap..Which means if the total supply decrease from (21,000), by then the Smart contract can mint new SPERMO TOKEN again but it will not exceed to 21,000 SPERMO.
+  We do this to bring value for both NFT and SPERMO TOKEN, this way we can bring utility to the <a href="https://opensea.io/collection/onchain-sperm" >NFT collections</a> that are receving the minted tokens everyday..
+</p>
+<p>In this case even we stated that the minting and distribution of SPERMO TOKEN will only happen for 5 years, please be informed that the statement was made before we implemented the burning of SPERMO.
+Which mean,the minting of SPERMO TOKEN will only stop if it reaches the max supply of 21,000 and the Smart contract can mint again if it decrease because of the burning. It will create a loop and will repeat the process again and again, and who ever hold the NFT will receive SPERMO TOKEN everyday without ending.</p>
+<p>
+Overall, the deflationary nature of SPERMO TOKEN and the regular burning of collected fees can potentially make it a more valuable investment over time. However, like all investments, there are risks involved and it is important to do your own research and understand the potential benefits and drawbacks before investin.
+
+  </p>
+SPERMO TOKEN is the official utility and governance token of the ONCHAIN SPERM ecosystem, a platform dedicated to creating and managing non-fungible tokens (NFTs). This token serves as a reward system for NFT holders within the ecosystem. Unlike other cryptocurrencies that are pre-mined, SPERMO TOKEN was launched with no pre-mined tokens, ensuring a fair and equal distribution.</p>
+<p>
+SPERMO TOKEN has a unique supply mechanism where its initial supply starts from zero, and its maximum supply is limited to 21,000 tokens. This means that the token's value is likely to increase over time due to its limited supply. Moreover, the governance feature of the token allows the holders to participate in making important decisions related to the ecosystem, ensuring transparency and fairness.</p>
+<p>It has a multi-functional role within the ONCHAIN SPERM ecosystem. Not only does it function as a governance token and a reward token for ONCHAIN SPERM NFT holders, but it also serves as a utility token within the ecosystem. This means that users can use SPERMO TOKEN to access various features and services provided by ONCHAIN SPERM, such as transaction fees and other network-related services.</p>
+<p>
+Overall, SPERMO TOKEN is an exciting and innovative cryptocurrency that serves a vital role within the ONCHAIN SPERM ecosystem. With its unique supply mechanism, governance features, and reward system for NFT holders, it offers an excellent investment opportunity for individuals interested in cryptocurrencies and NFTs.
+</p>
+
+  
+  
+  
+  
+  
+
+<section>
+<div class="box" id="whitepaper-box" onclick="handleClick('./whitepaper')">
+  <span class="arrrow">&#8598;</span>
+  <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">WHITEPAPER</a></p>
+</div>
+
+</section>
+
+
+
+<div class="box" onclick="handleClick('./tokenpurpose')">
+  <span class="arrow">&#8599;</span>
+  <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">TOKEN PURPOSE</a></p>
+</div>
+
+  
+</body>
+</div>
+</html>
